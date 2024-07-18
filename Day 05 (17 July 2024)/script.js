@@ -130,3 +130,19 @@
 
 // Task 10:
 // Write a higher order function that takes two functions and a value , applies the first function to the value , and then applies the second function to the result.
+
+let value = 3;
+
+let func1 = (val) => {
+  return val * 2;
+};
+
+let func2 = (val) => {
+  return val * 4;
+};
+
+HigherOrderFunc = (first, second, valuee) => {
+  return second(first(valuee));
+};
+
+console.log(HigherOrderFunc(func1, func2, value));
