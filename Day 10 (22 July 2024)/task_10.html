@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation Example</title>
+  </head>
+  <body>
+    <ul id="parentList">
+      <li class="item">Item 1</li>
+      <li class="item">Item 2</li>
+      <li class="item">Item 3</li>
+    </ul>
+
+    <script>
+      // Parent element
+      const parentList = document.getElementById("parentList");
+
+      // Event listener on parent
+      parentList.addEventListener("click", function (event) {
+        // Check if the clicked element is an item
+        if (event.target && event.target.matches(".item")) {
+          alert("Clicked on: " + event.target.textContent);
+        }
+      });
+    </script>
+  </body>
+</html>
